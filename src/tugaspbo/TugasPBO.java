@@ -22,6 +22,46 @@ public class TugasPBO {
         System.out.println("            SOSIAL MEDIA            ");
         System.out.println("------------------------------------");
         
-        //membuat try catch
+         //membuat try catch
+        try{
+            //membuat perulangan do while untuk inputan data
+            do{
+                System.out.print("PILIH GROUP SOSIAL MEDIA ANTARA 1/2 : ");
+                group = input.nextInt();
+                
+                if(group == 1){
+                    System.out.print("Masukkan nama  : ");
+                    nama = input.next();
+            
+                    System.out.print("Masukkan email : ");
+                    email = input.next();
+            
+                    System.out.print("Masukkan jenis kelamin : ");
+                    jenisKelamin = input.next();
+            
+                    list.add(new Sosmed(nama, email, jenisKelamin));
+                }
+                else{
+                    System.out.print("Masukkan nama  : ");
+                    nama = input.next();
+            
+                    System.out.print("Masukkan email : ");
+                    email = input.next();
+            
+                    System.out.print("Masukkan jenis kelamin : ");
+                    jenisKelamin = input.next();
+            
+                    list2.add(new Sosmed(nama, email, jenisKelamin));
+                }
+            
+                System.out.print("\nTekan 1 untuk menambah data dan 0 untuk berhenti : ");
+                mengulang = input.nextInt();
+                System.out.println("");
+            }
+            while(mengulang != 0);
+        }
+        catch(java.util.InputMismatchException a){
+            System.err.println("INPUTAN SALAH, INPUT GROUP HARUS ANGKA!");
+        }
     }
 }
