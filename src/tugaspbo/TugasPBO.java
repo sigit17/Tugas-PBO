@@ -63,5 +63,18 @@ public class TugasPBO {
         catch(java.util.InputMismatchException a){
             System.err.println("INPUTAN SALAH, INPUT GROUP HARUS ANGKA!");
         }
+        System.out.println("--------------------------------");
+        dataHash.put("group1",list);
+        dataHash.put("group2", list2);
+        
+        System.out.println("GROUP 1");
+        list.forEach((a) -> { 
+            System.out.println("Nama : "+a.getNama()+"\nEmail : "+a.getEmail()+"\nJenis Kelamin : "+a.getJenisKelamin());
+        });
+        System.out.println();
+        System.out.println("GROUP 2");
+        list2.forEach((b) -> {
+            System.out.println("Nama : "+b.getNama()+"\nEmail : "+b.getEmail()+"\nJenis Kelamin : "+b.getJenisKelamin());
+        });
     }
 }
