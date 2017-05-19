@@ -7,6 +7,12 @@ public class Sosmed {
     private String email;
     private String jenisKelamin;
     
+    public Sosmed(String nama, String email, String jenisKelamin){
+        this.nama = nama;
+        this.email = email;
+        this.jenisKelamin = jenisKelamin;
+    }
+    
     public String getNama() {
         return nama;
     }
